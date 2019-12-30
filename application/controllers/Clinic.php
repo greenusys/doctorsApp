@@ -64,6 +64,13 @@ class Clinic extends CI_Controller
 	
 	public function add_Clinic()
 	{	
+		//  print_r($_POST['doc']);
+		$doc_seated_id=$this->input->post('doc');
+		// print_r($doc_break_id);
+		$doc_break_id=implode(",",$doc_seated_id);
+		//  print_r($doc_break_id);
+
+		// 
 
 		$data = array();
 		        
@@ -103,29 +110,38 @@ class Clinic extends CI_Controller
 
 		            }
 		            $pics=implode(",",$images);
-		            // print_r($pics);
+					// print_r($pics);
+					
 
 		        if(!empty($uploadData))
-		         {
-    
-		            $data=array("fname"=>$this->input->post('fname'),
-						"lname"=>$this->input->post('lname'),
-						"email"=>$this->input->post('email'),
-						"address"=>$this->input->post('address'),
-						"country"=>$this->input->post('country'),
-						"city"=>$this->input->post('city'),
-						"state"=>$this->input->post('state'),
-						"zip_code"=>$this->input->post('zc'),
-						"home_phone"=>$this->input->post('hc'),
-				 		"work_phone"=>$this->input->post('wc'),
-						"mobile"=>$this->input->post('mob'),
-			 			"note"=>$this->input->post('note'),
-			            'owner_image'=>$pics);
+		         {																				 
+		            $data=array("clinic_cat_id"=>$this->input->post('cliniccategoryid'),
+						"clinic_name"=>$this->input->post('clinicname'),
+						"clinic_doctors"=>$doc_break_id,
+						"clinic_email"=>$this->input->post('clinicemail'),
+						"clinic_opentime"=>$this->input->post('opentime'),
+						"clinic_closetime"=>$this->input->post('closetime'),
+						"clinic_ownername"=>$this->input->post('ownamne'),
+						"clinic_owneremail"=>$this->input->post('owemail'),
+						"clinic_ownercontact"=>$this->input->post('ownercontact'),
+				 		"clinic_registration"=>$this->input->post('registration'),
+						"clinic_establish"=>$this->input->post('established'),
+						 "clinic_country"=>$this->input->post('country'),
+						 "clinic_state"=>$this->input->post('state'),
+						"clinic_city"=>$this->input->post('city'),
+						"clinic_postcode"=>$this->input->post('postcode'),
+						"clinic_latitude"=>$this->input->post('latitude'),
+						"clinic_longitude"=>$this->input->post('longitude'),
+						"clinic_address"=>$this->input->post('address'),
+						"clinic_bio"=>$this->input->post('bio'),
+						"clinic_status"=>$this->input->post('status'),
+						"clinic_adddate"=>date('d-m-y'),
+			            'clinic_image'=>$pics);
 		         
 		           
 
         	   $results=$this->Clinic_model->insert_Clinic($data);
-        	  // print_r($results);
+        	    // print_r($data);
 
          	  switch ($results) 
 				{
@@ -158,3 +174,4 @@ class Clinic extends CI_Controller
 
 		 }
 }
+

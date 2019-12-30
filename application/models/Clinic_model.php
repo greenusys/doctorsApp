@@ -50,10 +50,10 @@ class Clinic_model extends CI_Model
 	public function insert_Clinic($data)
 	{
 		$this->db->where($data);
-		$re=$this->db->get('building')->result();
+		$re=$this->db->get('clinic')->result();
 		if(count($re)==0)
 		{
-			$results=$this->db->insert('building',$data);
+			$results=$this->db->insert('clinic',$data);
 			if($results)
 			{
 				return 1;

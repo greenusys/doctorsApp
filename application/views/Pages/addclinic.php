@@ -4,7 +4,7 @@
         $(document).ready(function(){
           $('#countryIds').on('change',function(){
             var countryid=$(this).val();
-             alert(countryid);
+            //  alert(countryid);
             $.ajax({
               url:"<?=base_url('Doctors/get_States')?>",
               type:"post",
@@ -86,8 +86,10 @@
 				if(this.checked)
 				{   
 					doc.push($(this).val());
+					// doc.push($(this).val());
 						// $(".pushpop").attr('disabled', true);
-							$(this).attr('disabled',false);
+							// $(this).attr('disabled',false);
+
 					}
 					else
 					{
@@ -158,7 +160,7 @@
                         <form action="<?=base_url('Clinic/add_Clinic')?>" method="post" enctype="multipart/form-data">
 						<div class="form-group">
                                 <label><strong>Category</strong></label>
-								<select  class="countries order-alpha input-style form-control " autocomplete="false" required name="categoryid" id="categoryid">
+								<select  class="countries order-alpha input-style form-control " autocomplete="false" required name="cliniccategoryid" id="categoryid">
 						<option value="">Select Category</option>
 						<?php
                       foreach ($fetchCategories as $cat) 
@@ -180,51 +182,51 @@
                                 <div class="col-sm-6">
                                     <div class="form-group">
                                         <label><strong>Clinic Name</strong> <span class="text-danger">*</span></label>
-                                        <input class="form-control" type="text" name="clinicname">
+                                        <input class="form-control" type="text" required name="clinicname">
                                     </div>
                                 </div>
                                 <div class="col-sm-6">
 								<div class="form-group">
                                         <label><strong>Clinic Email</strong> <span class="text-danger">*</span></label>
-                                        <input class="form-control" type="email" name="clinicemail">
+                                        <input class="form-control" type="email" required name="clinicemail">
                                     </div>
                                    
 								</div>
 								<div class="col-sm-6">
                                     <div class="form-group">
                                         <label><strong>Open Time</strong> <span class="text-danger">*</span></label>
-                                        <input class="form-control" type="time" name="opentime">
+                                        <input class="form-control" type="time" required name="opentime">
                                     </div>
 								</div>
 								<div class="col-sm-6">
                                     <div class="form-group">
                                         <label><strong>Closed Time</strong> <span class="text-danger">*</span></label>
-                                        <input class="form-control" type="time" name="closetime">
+                                        <input class="form-control" type="time" required name="closetime">
                                     </div>
                                 </div>
                                 <div class="col-sm-6">
 								<div class="form-group">
                                         <label><strong>Owner Name</strong></label>
-                                        <input class="form-control" type="text" name="ownamne">
+                                        <input class="form-control" type="text" required name="ownamne">
                                     </div>
 								</div>
 								<div class="col-sm-6">
 								<div class="form-group">
                                         <label><strong>Owner Email</strong></label>
-                                        <input class="form-control" type="text" name="owemail">
+                                        <input class="form-control" type="text" required name="owemail">
                                     </div>
                                 </div>
                                 <div class="col-sm-6">
 								<div class="form-group">
                                         <label><strong>Owner Contact</strong> <span class="text-danger">*</span></label>
-                                        <input class="form-control" type="text" name="ownercontact">
+                                        <input class="form-control" type="text" required name="ownercontact">
                                     </div>
 							
                                 </div>
                                 <div class="col-sm-6">
                                     <div class="form-group">
                                         <label><strong>Clinic Registration Number</strong></label>
-                                        <input class="form-control" type="text" name="registration">
+                                        <input class="form-control" type="text" required name="registration">
                                     </div>
                                 </div>
                                 <!-- <div class="col-sm-6">
@@ -237,7 +239,7 @@
                                     <div class="form-group">
                                         <label><strong>Clinic Established</strong></label>
                                         <div class="">
-                                            <input type="date" class="form-control" name="established">
+                                            <input type="date" class="form-control" required name="established">
                                         </div>
                                     </div>
                                 </div>
@@ -286,14 +288,14 @@
 										<div class="col-sm-6 col-md-6 col-lg-3">
 											<div class="form-group">
 												<label><strong>Postal Code</strong></label>
-												<input type="text" class="form-control" name="postcode">
+												<input type="text" class="form-control"required name="postcode">
 											</div>
 										</div>
 										<div class="col-sm-6">
 								<div class="form-group">
                                         <label><strong>Latitude</strong></label>
                                         <div class="">
-                                            <input type="text" class="form-control" name="latitude">
+                                            <input type="text" class="form-control" required name="latitude">
 										</div>
 										
                                     </div>
@@ -302,7 +304,7 @@
 								<div class="form-group">
                                         <label><strong>Longitude</strong></label>
                                         <div class="">
-                                            <input type="text" class="form-control" name="longitude">
+                                            <input type="text" class="form-control" required name="longitude">
 										</div>
 										
                                     </div>
@@ -310,7 +312,7 @@
 										<div class="col-sm-12">
 											<div class="form-group">
 												<label><strong>Address</strong></label>
-												<textarea class="form-control" rows="3" cols="30" name="address"></textarea>
+												<textarea class="form-control" rows="3" cols="30" required name="address"></textarea>
 											</div>
 										</div>
 									</div>
@@ -329,7 +331,7 @@
 												<img alt="" src="assets/img/user.jpg">
 											</div> -->
 											<div class="upload-input">
-											<input type="file"  name="files[]" required multiple>
+											<input type="file"  name="files[]"  required multiple>
 											</div>
 										</div>
 									</div>
@@ -338,7 +340,7 @@
 							
 							<div class="form-group">
                                 <label><strong>Short Biography</strong></label>
-                                <textarea class="form-control" rows="3" cols="30" name="bio"></textarea>
+                                <textarea class="form-control" rows="3" cols="30" required name="bio"></textarea>
                             </div>
                             <div class="form-group">
                                 <label class="display-block"><strong>Status</strong></label>
@@ -356,13 +358,13 @@
 								</div>
                             </div>
                             <div class="m-t-20 text-center">
-                                <button  ype="submit" class="btn btn-primary submit-btn">Create Clinic</button>
+                                <button type="submit" class="btn btn-primary submit-btn" id="abc">Create Clinic</button>
                             </div>
                         </form>
                     </div>
                 </div>
             </div>
-			<div class="notification-box">
+			<!-- <div class="notification-box">
                 <div class="msg-sidebar notifications msg-noti">
                     <div class="topnav-dropdown-header">
                         <span>Messages</span>
@@ -570,6 +572,6 @@
                         <a href="chat.html">See all messages</a>
                     </div>
                 </div>
-            </div>
+            </div> -->
 		</div>
 		
