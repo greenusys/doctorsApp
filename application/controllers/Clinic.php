@@ -173,5 +173,13 @@ class Clinic extends CI_Controller
 		        }
 
 		 }
+
+		 public function clinicSection()
+		 {
+			 $data['fetchclinic']=$this->Clinic_model->fetchClinicdata();
+			 $this->load->view('Layout/header');
+			 $this->load->view('Pages/viewclinic',$data);
+			  $this->load->view('Layout/footer');	
+		 }
 }
 

@@ -166,7 +166,7 @@
 							<a href="#"><i class="fa fa-user-md"></i><span> Clinic </span> <span class="menu-arrow"></span></a>
 							<ul style="display: none;">
 								<li><a href="<?=base_url('Clinic/viewClinicSection')?>"><i class="fa fa-plus-circle" aria-hidden="true"></i>Add Clinic</a></li>
-								<li><a href="<?=base_url('Clinic/viewDCSection')?>"><i class="fa fa-eye" aria-hidden="true"></i> Clinic</a></li>
+								<li><a href="<?=base_url('Clinic/clinicSection')?>"><i class="fa fa-eye" aria-hidden="true"></i> Clinic</a></li>
 								
 							</ul>
 						</li>

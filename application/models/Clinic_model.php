@@ -69,5 +69,12 @@ class Clinic_model extends CI_Model
 			return 2;
 	    }
 	}
+	public function fetchClinicdata()
+	{
+		return $this->db->query("select clinic.*,category.*,doctors.*,countries.*,states.*, cities.* ,countries.name as country_name, states.name as state_name, cities.name as city_name from clinic join countries on countries.country_id= clinic.clinic_country join cities on cities.cities_id=clinic.clinic_city join states on states.states_id=clinic.clinic_state join category on category.cat_id=clinic.clinic_cat_id join doctors on doctors.doc_id=clinic.clinic_doctors")->result();
+	 
+ 		// return $this->db->get('doctors')->result();
+
+	}
 	
 }
