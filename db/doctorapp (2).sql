@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 30, 2019 at 12:24 PM
+-- Generation Time: Dec 31, 2019 at 08:59 AM
 -- Server version: 10.1.37-MariaDB
 -- PHP Version: 5.6.40
 
@@ -48103,7 +48103,8 @@ CREATE TABLE `clinic` (
 --
 
 INSERT INTO `clinic` (`clinic_id`, `clinic_cat_id`, `clinic_name`, `clinic_doctors`, `clinic_email`, `clinic_opentime`, `clinic_closetime`, `clinic_ownername`, `clinic_owneremail`, `clinic_ownercontact`, `clinic_registration`, `clinic_establish`, `clinic_country`, `clinic_state`, `clinic_city`, `clinic_postcode`, `clinic_latitude`, `clinic_longitude`, `clinic_address`, `clinic_bio`, `clinic_status`, `clinic_image`, `clinic_adddate`) VALUES
-(1, 3, 'gayatri', '2,5', 'gay@gmail.com', '09:00', '17:00', 'shubham', 'shubhambhattshubh@gmail.com', '7894561230', 'ssf2ege4g1eg', '2019-12-06', 101, 39, 5298, '265694', '30.3165', '252363', 'dehradun dfsfn', 'short bio', 1, 'clinic_image-2019-12-30-12-21-160.jpg,clinic_image-2019-12-30-12-21-161.jpg,clinic_image-2019-12-30-12-21-162.jpg', '30-12-19');
+(1, 3, 'Gayatri clinic', '2,5', 'gay@gmail.com', '09:00', '17:00', 'shubham', 'shubhambhattshubh@gmail.com', '7894561230', 'ssf2ege4g1eg', '2019-12-06', 101, 39, 5298, '265694', '30.3165', '252363', 'dehradun dfsfn', 'short bio', 1, 'clinic_image-2019-12-30-12-21-160.jpg,clinic_image-2019-12-30-12-21-161.jpg,clinic_image-2019-12-30-12-21-162.jpg', '30-12-19'),
+(2, 12, 'Doon clinic', '4', 'shubhambhattshubh@gmail.com', '00:02', '18:00', 'shubham', 'shubhambhattshubh@gmail.com', '7894561230', 'ssf2ege4g1eg', '2019-12-25', 101, 39, 5236, '265694', '20320.125', '78.0322', 'dehradun cv bf', 'bioooooooo', 1, 'clinic_image-2019-12-30-12-51-390.jpg,clinic_image-2019-12-30-12-51-391.jpg', '30-12-19');
 
 -- --------------------------------------------------------
 
@@ -52617,7 +52618,7 @@ ALTER TABLE `cities`
 -- AUTO_INCREMENT for table `clinic`
 --
 ALTER TABLE `clinic`
-  MODIFY `clinic_id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `clinic_id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `countries`
