@@ -29,7 +29,7 @@
 <div class="main-wrapper">
 <div class="header">
 			<div class="header-left">
-				<a href="#" class="logo">
+				<a href="<?=base_url('Home/index')?>" class="logo">
 					<img src="<?=base_url()?>assets/img/logo.png" width="35" height="35" alt=""> <span>DoctorsApp</span>
 				</a>
 			</div>
@@ -114,27 +114,27 @@
                 <li class="nav-item dropdown has-arrow">
                     <a href="#" class="dropdown-toggle nav-link user-link" data-toggle="dropdown">
                         <span class="user-img">
-							<img class="rounded-circle" src="assets/img/user.jpg" width="24" alt="Admin">
+							<img class="rounded-circle" src="<?=base_url()?>assets/img/user.jpg" width="24" alt="Admin">
 							<span class="status online"></span>
 						</span>
-						<span>Admin</span>
+						<!-- <span>Admin</span> -->
                     </a>
 					<div class="dropdown-menu">
-						<a class="dropdown-item" href="profile.html">My Profile</a>
+						<!-- <a class="dropdown-item" href="profile.html">My Profile</a>
 						<a class="dropdown-item" href="edit-profile.html">Edit Profile</a>
-						<a class="dropdown-item" href="settings.html">Settings</a>
-						<a class="dropdown-item" href="login.html">Logout</a>
+						<a class="dropdown-item" href="settings.html">Settings</a> -->
+						<a class="dropdown-item" href="<?=base_url('Login/logOut')?>">Logout</a>
 					</div>
                 </li>
             </ul>
-            <div class="dropdown mobile-user-menu float-right">
+            <!-- <div class="dropdown mobile-user-menu float-right">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><i class="fa fa-ellipsis-v"></i></a>
-                <div class="dropdown-menu dropdown-menu-right">
-                    <a class="dropdown-item" href="profile.html">My Profile</a>
+                <div class="dropdown-menu dropdown-menu-right"> -->
+                    <!-- <a class="dropdown-item" href="profile.html">My Profile</a>
                     <a class="dropdown-item" href="edit-profile.html">Edit Profile</a>
-                    <a class="dropdown-item" href="settings.html">Settings</a>
-                    <a class="dropdown-item" href="login.html">Logout</a>
-                </div>
+                    <a class="dropdown-item" href="settings.html">Settings</a> -->
+                    <!-- <a class="dropdown-item" href="">Logout</a> -->
+                <!-- </div> -->
             </div>
 		</div>
 		<div class="sidebar" id="sidebar">
@@ -146,7 +146,7 @@
                             <a href="<?=base_url('Home/index')?>"><i class="fa fa-dashboard"></i> <span>Dashboard</span></a>
 						</li>
 						<li class="submenu">
-							<a href="#"><i class="fa fa-user-md"></i><span> Categories </span> <span class="menu-arrow"></span></a>
+							<a href="#"><i class="fa fa-list-alt"></i><span> Categories </span> <span class="menu-arrow"></span></a>
 							<ul style="display: none;">
 								<li><a href="<?=base_url('Category/viewCatSection')?>"><i class="fa fa-plus-circle" aria-hidden="true"></i>Add Categories</a></li>
 								<li><a href="<?=base_url('Category/catSection')?>"><i class="fa fa-eye" aria-hidden="true"></i>Categories </a></li>
@@ -163,7 +163,7 @@
 							</ul>
 						</li>
 						<li class="submenu">
-							<a href="#"><i class="fa fa-user-md"></i><span> Clinic </span> <span class="menu-arrow"></span></a>
+							<a href="#"><i class="fa fa-hospital-o"></i><span> Clinic </span> <span class="menu-arrow"></span></a>
 							<ul style="display: none;">
 								<li><a href="<?=base_url('Clinic/viewClinicSection')?>"><i class="fa fa-plus-circle" aria-hidden="true"></i>Add Clinic</a></li>
 								<li><a href="<?=base_url('Clinic/clinicSection')?>"><i class="fa fa-eye" aria-hidden="true"></i> Clinic</a></li>

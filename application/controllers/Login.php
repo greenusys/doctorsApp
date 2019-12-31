@@ -36,7 +36,8 @@ class Login extends CI_Controller
 	
 	public function logOut(){
 		$this->session->sess_destroy();
-		redirect('Login-Page');
+		$this->load->view('Pages/login');
+		// redirect('');
 	}
 
 	public function Viewforgotpassword()
@@ -72,6 +73,7 @@ class Login extends CI_Controller
 	
 	   $this->load->view('Pages/forgotpassword');	
    }
+   
 
 
 	            

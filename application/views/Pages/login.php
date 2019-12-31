@@ -24,7 +24,8 @@
 				<div class="account-box">
                     <form action="<?=base_url('Login/login_validate')?>" class="form-signin">
 						<div class="account-logo">
-                            <a href="#"><img src="assets/img/logo-dark.png" alt=""></a>
+							<a href="#"><img src="<?=base_url()?>assets/img/logo-dark.png" alt=""></a><br>
+							<span><strong>DoctorsApp</strong></span>
                         </div>
                         <div class="form-group">
                             <label> Email</label>

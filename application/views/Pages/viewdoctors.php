@@ -43,13 +43,13 @@
 					?>
                    
                 </div>
-				<div class="row">
+				<!-- <div class="row">
                     <div class="col-sm-12">
                         <div class="see-all">
                             <a class="see-all-btn" href="javascript:void(0);">Load More</a>
                         </div>
                     </div>
-                </div>
+                </div> -->
             </div>
             <!-- <div class="notification-box">
                 <div class="msg-sidebar notifications msg-noti">

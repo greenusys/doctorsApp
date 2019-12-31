@@ -1,7 +1,6 @@
 <?php
 class Category extends CI_Controller
 {
-	
 	function __construct()
 	{
 	parent::__construct();
@@ -16,7 +15,6 @@ class Category extends CI_Controller
 	}
 	public function addCatSection()
 	{	
-
 		$data=array('cat_name'=>$this->input->post('category'),
 					'cat_date'=>date('Y-m-d'));
 		$results=$this->Category_model->addcat($data);
